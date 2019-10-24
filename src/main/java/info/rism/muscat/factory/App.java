@@ -1,13 +1,16 @@
 package info.rism.muscat.factory;
 
+import java.io.IOException;
+
 /**
- * Hello world!
+ * Main class
  *
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws IOException
     {
-        System.out.println( "Hello RISM-World!" );
+    	MarcConfig marcConfig = new MarcConfig("muscat/config/marc/tag_config_work.yml");
+        System.out.println( marcConfig.tags_with_subfields() );
     }
 }

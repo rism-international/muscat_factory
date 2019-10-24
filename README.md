@@ -1,2 +1,1 @@
-# muscat_factory
-factory
+Factory for Muscat MarcXML records

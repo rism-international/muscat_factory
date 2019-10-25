@@ -34,20 +34,23 @@ public class MarcxmlBuilder {
 			DataField df = factory.newDataField(keyString, '1', '0');
 			@SuppressWarnings("unchecked")
 			ArrayList<String> valObject = (ArrayList<String>) entry.getValue();
+			String content = new String();
 			if (keyString.startsWith("00")) {
 				String contentString = fieldContent.getContent(keyString, null);
 				if (contentString!=null) {
 					record.addVariableField(factory.newControlField(keyString, contentString));
 				}
 				else {
-					record.addVariableField(factory.newControlField(keyString, "12345678"));
+					String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
+					content = String.format("tag %s at %s", keyString, time);
+					record.addVariableField(factory.newControlField(keyString, content));
 				}
 			}
 			else {
 				for (String subfield : valObject) {
 				
 					char code = subfield.charAt(0);
-					String content = new String();
+					
 					String contentString = fieldContent.getContent(keyString, String.valueOf(code));
 					if (contentString != null) {
 						content = contentString;

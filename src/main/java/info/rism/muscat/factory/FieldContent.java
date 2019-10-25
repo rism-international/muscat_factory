@@ -8,12 +8,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-import javax.crypto.NullCipher;
-
 public class FieldContent {
 	
-	private final String filename;
-	
+	private final String filename;	
 	private final HashMap<String, HashMap<String, String>> tags;
 	
 	public FieldContent(String filename) throws FileNotFoundException, IOException {

@@ -16,16 +16,16 @@ import org.marc4j.marc.MarcFactory;
 import org.marc4j.marc.Record;
 
 public class MarcxmlBuilder {
-	
+
 	private final String filename;	
-	
+
 	public MarcxmlBuilder(String filename) {
 		String dirString = System.getProperty("user.dir");
 		this.filename = dirString + "/" + filename; 
 	}
-	
+
 	public void build(MarcConfig marcConfig, FieldContent fieldContent, String leader) throws FileNotFoundException {
-		
+
 		MarcFactory factory = MarcFactory.newInstance();
 		Record record = factory.newRecord(leader);
 		//record.addVariableField(factory.newControlField("001", "12883376"));
@@ -42,24 +42,21 @@ public class MarcxmlBuilder {
 				}
 				else {
 					String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
-					content = String.format("tag %s at %s", keyString, time);
+					content = String.format("### tag %s at %s ###", keyString, time);
 					record.addVariableField(factory.newControlField(keyString, content));
 				}
 			}
 			else {
 				for (String subfield : valObject) {
-				
 					char code = subfield.charAt(0);
-					
 					String contentString = fieldContent.getContent(keyString, String.valueOf(code));
 					if (contentString != null) {
 						content = contentString;
 					} else {
 						String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
-						content = String.format("tag %s-code %s at %s", keyString, code, time);
+						content = String.format("### tag %s-code %s at %s ###", keyString, code, time);
 					}				 
 					df.addSubfield(factory.newSubfield(code, content));
-				
 				}
 				record.addVariableField(df);
 			}
@@ -68,7 +65,7 @@ public class MarcxmlBuilder {
 		MarcWriter writer = new MarcXmlWriter(out, true);		
 		writer.write(record);
 		writer.close();		 
-				
+
 	}
 
 }

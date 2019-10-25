@@ -15,24 +15,24 @@ public class FieldContent {
 	
 	public FieldContent(String filename) throws FileNotFoundException, IOException {
 		String dirString = System.getProperty("user.dir");
-		this.filename = dirString + "/config/" + filename;
+		this.filename = dirString + "/config/marc/" + filename;
 		this.tags = parse();	 
 	}
 
 	public HashMap<String, HashMap<String, String>> parse() throws FileNotFoundException, IOException {
 		HashMap<String, HashMap<String, String>> hash = new HashMap<String, HashMap<String, String>>();
 		try(BufferedReader br = new BufferedReader(new FileReader(this.filename))) {
-		    for(String line; (line = br.readLine()) != null; ) {
+			for(String line; (line = br.readLine()) != null; ) {
 				String tag = line.split("\\s+")[0].replace("=", "");
 				List<String> sfList = Arrays.asList(line.split("\\$"));
 				HashMap<String, String> sfHashMap = new HashMap<String, String>();
-				
+
 				if (tag.startsWith("00")) {
 					String contentString = line.split("\\s+")[1];
 					sfHashMap.put(null, contentString);
 					hash.put(tag, sfHashMap);
-					
 				}
+				
 				else {
 					for (String e : sfList) {					
 						if (e.matches("^[0-9a-z].*")){
@@ -40,10 +40,10 @@ public class FieldContent {
 							String content = e.substring(1, e.length());
 							sfHashMap.put(subfieldcode, content);
 						}					
-				      }  
+					}  
 					hash.put(tag, sfHashMap);
 				}
-		    }
+			}
 		}
 		return hash;
 	}
@@ -52,12 +52,10 @@ public class FieldContent {
 		return this.tags;
 	}
 	
-	public String getContent(String tag, String subfield) {
-		
+	public String getContent(String tag, String subfield) {		
 		if (this.tags.get(tag) == null) {
 			return null;
-		}
-		
+		}		
 		HashMap<String, String> subHashMap = this.tags.get(tag);
 		if (subfield==null) {
 			return subHashMap.get(null);

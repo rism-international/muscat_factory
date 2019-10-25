@@ -5,9 +5,12 @@
 =240  0#$aWie schön leuchtet der Morgenstern$gRISM$03902503
 =245  10$a[caption title:] 33. Wie schön leuchtet der Morgen=Stern φ.
 =300  ##$ascore: f.19v$801
+=500  ##$aFirst work of Bach
 =593  ##$aManuscript copy$801
 =594  ##$bS$c1
+=599  ##$aThis is an internal comment
 =650  00$aCantatas$025226
 =690  ##$aBWV$n36/4$011
 =730  10$aSchwingt freudig euch empor$kExcerpts$mV (4)$04085513
 =852  ##$aD-B$cAm.B 48 (33)$eStaatsbibliothek zu Berlin - Preußischer Kulturbesitz, Musikabteilung$x30000655
+=930  ##$01001$aBach: Wie schön leuchtet der Morgenstern BWV1

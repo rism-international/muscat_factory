@@ -28,5 +28,7 @@ public class App
     		MarcxmlBuilder marcxmlBuilder = new MarcxmlBuilder("output/"+ model + ".xml");        
     		marcxmlBuilder.build(marcConfig, fieldContent, "00000cam a2200000 a 4500");
     	}
+    	Template template = new Template();
+    	System.out.println(template.getConfiguration());
     }
 }

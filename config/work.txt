@@ -1,0 +1,6 @@
+=001  1001
+=031  ##$a1$b1$c1$dChoral$gC-1$mS coro$nbB$o12/8$p=12/2.-/2.'F/''C'A/F''C/DD/1.C/$rF$tWie schön leuchtet der Morgenstern$u32717623
+=040  ##$aDE-633$beng$cDE-633
+=100  1#$aBach, Johann Sebastian$d1685-1750$mCoro, orch, org$nBWV 1$rD major$tWie schön leuchtet der Morgenstern$01001
+=380  ##$aCantatas$01001
+=548  ##$a1705$iDate of origin

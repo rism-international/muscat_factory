@@ -11,7 +11,6 @@ public class YamlParser {
 	public Map<String, Object> load_file(String file) throws IOException  {
 		String dirString = System.getProperty("user.dir");
 		String filename = dirString + "/" + file; 
-		System.out.println(dirString);
 		
 		Yaml yaml = new Yaml();
 		try {

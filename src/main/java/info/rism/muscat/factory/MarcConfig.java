@@ -11,14 +11,16 @@ import java.util.TreeMap;
 public class MarcConfig {
 	
 	private final Map<String, Object> configuration;
+	private final SortedMap<String, Object> tags;
 	
 	public MarcConfig(String filename) throws IOException{
 		YamlParser yamlParser = new YamlParser();
 		this.configuration = yamlParser.load_file(filename);
+		this.tags = tags_with_subfields();
 	}
 
 	@SuppressWarnings("unchecked")
-	public Object tags_with_subfields() {
+	public SortedMap<String, Object> tags_with_subfields() {
 		SortedMap<String, Object> resultMap = new TreeMap<String, Object>();
 		LinkedHashMap<String, Object> tags = (LinkedHashMap<String, Object>) this.configuration.get(":tags");
 		for (Map.Entry<String, Object> entry : tags.entrySet()) {
@@ -36,6 +38,10 @@ public class MarcConfig {
 		    }		    
 		}
 		return resultMap;
+	}
+	
+	public SortedMap<String, Object> getTags() {
+		return this.tags;
 	}
 
 	

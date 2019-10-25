@@ -26,24 +26,42 @@ public class FieldContent {
 				String tag = line.split("\\s+")[0].replace("=", "");
 				List<String> sfList = Arrays.asList(line.split("\\$"));
 				HashMap<String, String> sfHashMap = new HashMap<String, String>();
-				for (String e : sfList) {					
-					if (e.matches("^[0-9a-z].*")){
-						String subfieldcode = e.substring(0, 1);
-						String content = e.substring(1, e.length());
-						sfHashMap.put(subfieldcode, content);
-					}					
-			      }  
-				hash.put(tag, sfHashMap);			
+				
+				if (tag.startsWith("00")) {
+					String contentString = line.split("\\s+")[1];
+					sfHashMap.put(null, contentString);
+					hash.put(tag, sfHashMap);
+					
+				}
+				else {
+					for (String e : sfList) {					
+						if (e.matches("^[0-9a-z].*")){
+							String subfieldcode = e.substring(0, 1);
+							String content = e.substring(1, e.length());
+							sfHashMap.put(subfieldcode, content);
+						}					
+				      }  
+					hash.put(tag, sfHashMap);
+				}
 		    }
 		}
 		return hash;
 	}
 	
+	public HashMap<String, HashMap<String, String>> getTags() {
+		return this.tags;
+	}
+	
 	public String getContent(String tag, String subfield) {
+		
 		if (this.tags.get(tag) == null) {
 			return null;
 		}
+		
 		HashMap<String, String> subHashMap = this.tags.get(tag);
+		if (subfield==null) {
+			return subHashMap.get(null);
+		}
 		if (subHashMap.get(subfield) == null) {
 			return null;
 		}

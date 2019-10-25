@@ -32,8 +32,10 @@ public class MarcConfig {
 		    	List<Object> cfgList = (List<Object>) element;
 		    	subfields.add((String) cfgList.get(0));		    			    	
 		    }		        
-		    java.util.Collections.sort(subfields);			    
-		    if (subfields.get(0) != null && !subfields.get(0).isEmpty()) {
+		    java.util.Collections.sort(subfields);			
+		    //System.out.println(key);
+		    if (!key.contentEquals("000")) {
+		    //if (subfields.get(0) != null && !subfields.get(0).isEmpty()) {
 		    	resultMap.put(key, subfields);
 		    }		    
 		}

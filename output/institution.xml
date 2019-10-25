@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><marc:collection xmlns:marc="http://www.loc.gov/MARC21/slim">
+  <marc:record>
+    <marc:leader>00000cam a2200000 a 4500</marc:leader>
+    <marc:controlfield tag="001">12883376</marc:controlfield>
+    <marc:datafield tag="024" ind1="1" ind2="0">
+      <marc:subfield code="2">tag 024-code 2 at 2019-10-25 12:57:19.306</marc:subfield>
+      <marc:subfield code="a">tag 024-code a at 2019-10-25 12:57:19.306</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="034" ind1="1" ind2="0">
+      <marc:subfield code="d">tag 034-code d at 2019-10-25 12:57:19.306</marc:subfield>
+      <marc:subfield code="f">tag 034-code f at 2019-10-25 12:57:19.306</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="040" ind1="1" ind2="0">
+      <marc:subfield code="a">tag 040-code a at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="b">tag 040-code b at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="c">tag 040-code c at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="d">tag 040-code d at 2019-10-25 12:57:19.307</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="043" ind1="1" ind2="0">
+      <marc:subfield code="c">tag 043-code c at 2019-10-25 12:57:19.307</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="110" ind1="1" ind2="0">
+      <marc:subfield code="a">tag 110-code a at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="c">tag 110-code c at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="g">tag 110-code g at 2019-10-25 12:57:19.307</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="368" ind1="1" ind2="0">
+      <marc:subfield code="a">tag 368-code a at 2019-10-25 12:57:19.307</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="371" ind1="1" ind2="0">
+      <marc:subfield code="a">tag 371-code a at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="b">tag 371-code b at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="c">tag 371-code c at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="d">tag 371-code d at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="e">tag 371-code e at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="m">tag 371-code m at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="u">tag 371-code u at 2019-10-25 12:57:19.307</marc:subfield>
+      <marc:subfield code="z">tag 371-code z at 2019-10-25 12:57:19.307</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="373" ind1="1" ind2="0">
+      <marc:subfield code="a">tag 373-code a at 2019-10-25 12:57:19.308</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="410" ind1="1" ind2="0">
+      <marc:subfield code="a">tag 410-code a at 2019-10-25 12:57:19.308</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="510" ind1="1" ind2="0">
+      <marc:subfield code="a">tag 510-code a at 2019-10-25 12:57:19.308</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="551" ind1="1" ind2="0">
+      <marc:subfield code="0">tag 551-code 0 at 2019-10-25 12:57:19.308</marc:subfield>
+      <marc:subfield code="a">tag 551-code a at 2019-10-25 12:57:19.308</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="580" ind1="1" ind2="0">
+      <marc:subfield code="0">tag 580-code 0 at 2019-10-25 12:57:19.308</marc:subfield>
+      <marc:subfield code="x">tag 580-code x at 2019-10-25 12:57:19.308</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="667" ind1="1" ind2="0">
+      <marc:subfield code="a">tag 667-code a at 2019-10-25 12:57:19.308</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="670" ind1="1" ind2="0">
+      <marc:subfield code="0">tag 670-code 0 at 2019-10-25 12:57:19.308</marc:subfield>
+      <marc:subfield code="a">tag 670-code a at 2019-10-25 12:57:19.308</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="678" ind1="1" ind2="0">
+      <marc:subfield code="a">tag 678-code a at 2019-10-25 12:57:19.308</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="680" ind1="1" ind2="0">
+      <marc:subfield code="a">tag 680-code a at 2019-10-25 12:57:19.308</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="700" ind1="1" ind2="0">
+      <marc:subfield code="0">tag 700-code 0 at 2019-10-25 12:57:19.309</marc:subfield>
+      <marc:subfield code="4">tag 700-code 4 at 2019-10-25 12:57:19.309</marc:subfield>
+      <marc:subfield code="5">tag 700-code 5 at 2019-10-25 12:57:19.309</marc:subfield>
+      <marc:subfield code="a">tag 700-code a at 2019-10-25 12:57:19.309</marc:subfield>
+      <marc:subfield code="d">tag 700-code d at 2019-10-25 12:57:19.309</marc:subfield>
+      <marc:subfield code="e">tag 700-code e at 2019-10-25 12:57:19.309</marc:subfield>
+      <marc:subfield code="t">tag 700-code t at 2019-10-25 12:57:19.309</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="710" ind1="1" ind2="0">
+      <marc:subfield code="0">tag 710-code 0 at 2019-10-25 12:57:19.309</marc:subfield>
+      <marc:subfield code="a">tag 710-code a at 2019-10-25 12:57:19.309</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="856" ind1="1" ind2="0">
+      <marc:subfield code="u">tag 856-code u at 2019-10-25 12:57:19.309</marc:subfield>
+      <marc:subfield code="z">tag 856-code z at 2019-10-25 12:57:19.309</marc:subfield>
+    </marc:datafield>
+  </marc:record>
+</marc:collection>

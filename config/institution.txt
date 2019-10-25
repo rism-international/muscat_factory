@@ -1,0 +1,11 @@
+=001  30000655
+=024  ##$a2116114-8$2DNB
+=034  2#$d13.39099$f52.51752
+=040  ##$aDE-633
+=043  ##$cXA-DE
+=110  2#$aStaatsbibliothek zu Berlin - Preußischer Kulturbesitz, Musikabteilung$cBerlin$gD-B
+=368  ##$aB; K
+=371  ##$aStaatsbibliothek zu Berlin - Preußischer,  Kulturbesitz, Musikabteilung, Unter den Linden 8, 10117 Berlin, Germany$uhttp://staatsbibliothek-berlin.de/
+=410  2#$aStiftung Preußischer Kulturbesitz
+=551  ##$aBerlin$03900054
+=710  2#$aSammlung Wernigerode (Gräflich Stolbergische Bibliothek)$030060871

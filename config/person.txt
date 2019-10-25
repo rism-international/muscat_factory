@@ -1,0 +1,15 @@
+=001  2539
+=024  7#$a12304462$2VIAF
+=040  ##$aDE-633
+=042  ##$aindividualized
+=043  ##$cXA-DE
+=100  1#$aBach, Johann Sebastian$d1685-1750$y21.03.1685-28.07.1750
+=375  ##$amale
+=400  1#$aBach, Jan Sebastian$jxx
+=500  1#$aBach, Johann Christoph Friedrich$ifather of$02347
+=550  ##$aComposer
+=551  ##$aEisenach$igo
+=667  ##$aHofkapellmeister
+=670  ##$aDEUMM/b$bBach, Johann Sebastian [1685-1750]$w1577
+=680  ##$a1723-1750 Thomaskantor
+=856  ##$uhttp://digital.slub-dresden.de/werkansicht/dlf/11361/102/0/$ySchriftprobe [D-Dl Mus.2405-D-21 (fl 1, 2)]

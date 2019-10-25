@@ -1,0 +1,11 @@
+=001  11
+=041  0#$ager
+=100  1#$aSchmieder, Wolfgang$d1901-1990$080134
+=210  ##$aBWV
+=240  10$aThematisch-systematisches Verzeichnis der musikalischen Werke von Johann Sebastian Bach. Bach-Werke-Verzeichnis: 2., überarbeitete und erweiterte Auflage$gWork catalog$hbook
+=260  ##$aWiesbaden$bBreitkopf & Härtel$c1990
+=300  ##$aXLVI, 1014p.
+=337  ##$aPrinted medium
+=500  ##$aDie neue Auflage hat neue Zitierweisen, z.B.: 1006a/1000 (=Suite E-Dur, vormals BWV-Nr. 1006a, steht jetzt hinter der Nr. 1000)
+=599  ##$aRISM-HB
+=700  1#$aBach, Johann Sebastian$d1685-1750$02539$4cmp

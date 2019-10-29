@@ -17,7 +17,7 @@ All exported files are created in the output/ folder.
 ```bash
 user@host> mvn clean compile assembly:single
 ```
-
+xxxx
 ##### Execution
 With command line:
 

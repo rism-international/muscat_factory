@@ -12,12 +12,17 @@ All exported files are created in the output/ folder.
 - Java 8 or higher
 - Synchronized Muscat repository as submodule (eg. "git submodule update")
 
+##### Build
+
+```bash
+user@host> mvn clean compile assembly:single
+```
+
 ##### Execution
 With command line:
 
 ```bash
 user@host> java -jar bin/factory.jar
-
 ```
 
 #### Todo

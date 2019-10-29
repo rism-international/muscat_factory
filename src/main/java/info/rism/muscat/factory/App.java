@@ -29,6 +29,8 @@ public class App
     		marcxmlBuilder.build(marcConfig, fieldContent, "00000cam a2200000 a 4500");
     	}
     	Template template = new Template();
-    	System.out.println(template.getConfiguration());
+    	//System.out.println(template.getConfiguration());
+    	System.out.println(template.getLeader("edition"));
+    	System.out.println("Completed!");
     }
 }

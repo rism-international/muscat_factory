@@ -19,6 +19,11 @@ public class MarcConfig {
 		this.tags = tags_with_subfields();
 	}
 
+	/**
+	 * After loading Muscat Marc-configuration this 
+	 * returns a sorted map with {tag=[subfield_list,...],tag...} 
+	 * @return SortedMap
+	 */
 	@SuppressWarnings("unchecked")
 	public SortedMap<String, Object> tags_with_subfields() {
 		SortedMap<String, Object> resultMap = new TreeMap<String, Object>();
@@ -33,9 +38,7 @@ public class MarcConfig {
 		    	subfields.add((String) cfgList.get(0));		    			    	
 		    }		        
 		    java.util.Collections.sort(subfields);			
-		    //System.out.println(key);
 		    if (!key.contentEquals("000")) {
-		    //if (subfields.get(0) != null && !subfields.get(0).isEmpty()) {
 		    	resultMap.put(key, subfields);
 		    }		    
 		}

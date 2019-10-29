@@ -22,5 +22,11 @@ public class Template {
 		return this.configuration;
 	}
 	
+	public String getLeader(String template) {
+		String leader =  this.configuration.get(template).toString();
+		return leader;
+	}
+	
+	
 	
 }

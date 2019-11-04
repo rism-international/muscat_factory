@@ -25,8 +25,7 @@ public class App
     			models.add(file.getName().replace("tag_config_", "").replace(".yml", ""));
     		}    		
     	}
-    	for (String model : models) {
-    		
+    	for (String model : models) {    		
     		if (model.equals("source")) {
     			for (String tp : Template.all_templates()) {
     				MarcConfig marcConfig = new MarcConfig("muscat/config/marc/tag_config_" + model + ".yml");
@@ -34,16 +33,22 @@ public class App
     				List<String> excluded_tags = template.excluded_tags(); 
     				marcConfig.removeTags(excluded_tags);
     				FieldContent fieldContent = new FieldContent(tp + ".txt");
-    				MarcxmlBuilder marcxmlBuilder = new MarcxmlBuilder("output/sources/"+ tp + ".xml");        
-        			marcxmlBuilder.build(marcConfig, fieldContent, template.getLeader());    				    				
-    			}
-    			
+    				MarcxmlBuilder marcxmlBuilder = new MarcxmlBuilder("output/sources/"+ tp + ".xml");
+    				if (excluded_tags.contains("852")) {
+    					marcxmlBuilder.build(marcConfig, fieldContent, template.getLeader(), true);
+    				} else {
+    					marcxmlBuilder.build(marcConfig, fieldContent, template.getLeader(), false);
+    				}    				
+    			}   
+    			MarcxmlBuilder.merge();
     		}
     		else {
-    			MarcConfig marcConfig = new MarcConfig("muscat/config/marc/tag_config_" + model + ".yml");
-    			FieldContent fieldContent = new FieldContent(model + ".txt");
-    			MarcxmlBuilder marcxmlBuilder = new MarcxmlBuilder("output/"+ model + ".xml");        
-    			marcxmlBuilder.build(marcConfig, fieldContent, "00000cam a2200000 a 4500");
+    			if (!model.equals("holding")) {
+    				MarcConfig marcConfig = new MarcConfig("muscat/config/marc/tag_config_" + model + ".yml");
+    				FieldContent fieldContent = new FieldContent(model + ".txt");
+    				MarcxmlBuilder marcxmlBuilder = new MarcxmlBuilder("output/"+ model + ".xml");        
+    				marcxmlBuilder.build(marcConfig, fieldContent, "00000cam a2200000 a 4500", false);
+    			}
     		}
     	}
     	

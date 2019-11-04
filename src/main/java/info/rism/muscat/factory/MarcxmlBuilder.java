@@ -1,15 +1,23 @@
 package info.rism.muscat.factory;
 
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import org.marc4j.MarcReader;
 import org.marc4j.MarcWriter;
+import org.marc4j.MarcXmlReader;
 import org.marc4j.MarcXmlWriter;
 import org.marc4j.marc.DataField;
 import org.marc4j.marc.MarcFactory;
@@ -24,7 +32,7 @@ public class MarcxmlBuilder {
 		this.filename = dirString + "/" + filename; 
 	}
 
-	public void build(MarcConfig marcConfig, FieldContent fieldContent, String leader) throws FileNotFoundException {
+	public void build(MarcConfig marcConfig, FieldContent fieldContent, String leader, Boolean withHolding) throws IOException {
 
 		MarcFactory factory = MarcFactory.newInstance();
 		Record record = factory.newRecord(leader);
@@ -60,6 +68,13 @@ public class MarcxmlBuilder {
 				}
 				record.addVariableField(df);
 			}
+			
+		}
+		if (withHolding) {
+			List<DataField> hx = holding();
+			for (DataField dField : hx) {
+				record.addVariableField(dField);
+			}
 		}
 		OutputStream out = new FileOutputStream(this.filename);		
 		MarcWriter writer = new MarcXmlWriter(out, true);		
@@ -67,5 +82,55 @@ public class MarcxmlBuilder {
 		writer.close();		 
 
 	}
+	
+	/**
+	 * This method for practical reason does not read the holding configuration, but only the FieldContent 
+	 * @return
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
+	public List<DataField> holding() throws FileNotFoundException, IOException{
+		MarcFactory factory = MarcFactory.newInstance();
+		List<DataField> res = new ArrayList<DataField>();
+		FieldContent fieldContent = new FieldContent("holding.txt");
+		Map<String, HashMap<String, String>> fx = fieldContent.getTags();
+		for (String key : fieldContent.getTags().keySet()) {
+			if (!key.equals("001")) {
+				DataField df = factory.newDataField(key, '1', '0');				
+				Map<String, String> line = fx.get(key);
+				for (String tag : line.keySet()) {
+					df.addSubfield(factory.newSubfield(tag.charAt(0), line.get(tag)));										
+				}
+				res.add(df);
+			}			
+		}
+		return res;		
+	}
+	
+	/**
+	 * Merging all templates from sources folder to one sources.xml-file
+	 * @throws FileNotFoundException 
+	 */
+	public static void merge() throws FileNotFoundException {
+		String dirString = System.getProperty("user.dir");
+		String ofile = dirString + "/output/sources.xml"; 
+		OutputStream out = new FileOutputStream(ofile);		
+		MarcWriter writer = new MarcXmlWriter(out, true);
+    	File folder = new File(dirString + "/output/sources/");
+    	File[] listOfFiles = folder.listFiles();
+    	
+    	for (File file : listOfFiles) {
+    		InputStream in = new FileInputStream(file);
+            MarcReader reader = new MarcXmlReader(in);
+            while (reader.hasNext()) {
+    	        Record record = reader.next();
+    		writer.write(record);
+                }                
+            }
+    	writer.close();	
+	}    		
+    	
+		
+	
 
 }

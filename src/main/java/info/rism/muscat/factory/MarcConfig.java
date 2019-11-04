@@ -48,6 +48,13 @@ public class MarcConfig {
 	public SortedMap<String, Object> getTags() {
 		return this.tags;
 	}
+	
+	public SortedMap<String, Object> removeTags(List<String> excluded_tags){
+		for (String tag : excluded_tags) {
+			this.tags.remove(tag);
+		}		
+		return this.tags;		
+	}
 
 	
 }

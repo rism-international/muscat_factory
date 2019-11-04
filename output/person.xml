@@ -2,18 +2,18 @@
   <marc:record>
     <marc:leader>00000cam a2200000 a 4500</marc:leader>
     <marc:controlfield tag="001">2539</marc:controlfield>
-    <marc:controlfield tag="003">### tag 003 at 2019-10-29 15:53:08.159 ###</marc:controlfield>
-    <marc:controlfield tag="005">### tag 005 at 2019-10-29 15:53:08.159 ###</marc:controlfield>
-    <marc:controlfield tag="008">### tag 008 at 2019-10-29 15:53:08.159 ###</marc:controlfield>
+    <marc:controlfield tag="003">### tag 003 at 2019-11-04 12:51:28.318 ###</marc:controlfield>
+    <marc:controlfield tag="005">### tag 005 at 2019-11-04 12:51:28.318 ###</marc:controlfield>
+    <marc:controlfield tag="008">### tag 008 at 2019-11-04 12:51:28.318 ###</marc:controlfield>
     <marc:datafield tag="024" ind1="1" ind2="0">
       <marc:subfield code="2">VIAF</marc:subfield>
       <marc:subfield code="a">12304462</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="040" ind1="1" ind2="0">
       <marc:subfield code="a">DE-633</marc:subfield>
-      <marc:subfield code="b">### tag 040-code b at 2019-10-29 15:53:08.163 ###</marc:subfield>
-      <marc:subfield code="c">### tag 040-code c at 2019-10-29 15:53:08.164 ###</marc:subfield>
-      <marc:subfield code="d">### tag 040-code d at 2019-10-29 15:53:08.164 ###</marc:subfield>
+      <marc:subfield code="b">### tag 040-code b at 2019-11-04 12:51:28.318 ###</marc:subfield>
+      <marc:subfield code="c">### tag 040-code c at 2019-11-04 12:51:28.319 ###</marc:subfield>
+      <marc:subfield code="d">### tag 040-code d at 2019-11-04 12:51:28.319 ###</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="042" ind1="1" ind2="0">
       <marc:subfield code="a">individualized</marc:subfield>
@@ -23,9 +23,9 @@
     </marc:datafield>
     <marc:datafield tag="100" ind1="1" ind2="0">
       <marc:subfield code="a">Bach, Johann Sebastian</marc:subfield>
-      <marc:subfield code="c">### tag 100-code c at 2019-10-29 15:53:08.164 ###</marc:subfield>
+      <marc:subfield code="c">### tag 100-code c at 2019-11-04 12:51:28.319 ###</marc:subfield>
       <marc:subfield code="d">1685-1750</marc:subfield>
-      <marc:subfield code="w">### tag 100-code w at 2019-10-29 15:53:08.164 ###</marc:subfield>
+      <marc:subfield code="w">### tag 100-code w at 2019-11-04 12:51:28.319 ###</marc:subfield>
       <marc:subfield code="y">21.03.1685-28.07.1750</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="375" ind1="1" ind2="0">
@@ -33,7 +33,7 @@
     </marc:datafield>
     <marc:datafield tag="400" ind1="1" ind2="0">
       <marc:subfield code="a">Bach, Jan Sebastian</marc:subfield>
-      <marc:subfield code="d">### tag 400-code d at 2019-10-29 15:53:08.164 ###</marc:subfield>
+      <marc:subfield code="d">### tag 400-code d at 2019-11-04 12:51:28.319 ###</marc:subfield>
       <marc:subfield code="j">xx</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="500" ind1="1" ind2="0">
@@ -42,25 +42,25 @@
       <marc:subfield code="i">father of</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="510" ind1="1" ind2="0">
-      <marc:subfield code="0">### tag 510-code 0 at 2019-10-29 15:53:08.165 ###</marc:subfield>
-      <marc:subfield code="a">### tag 510-code a at 2019-10-29 15:53:08.165 ###</marc:subfield>
+      <marc:subfield code="0">### tag 510-code 0 at 2019-11-04 12:51:28.319 ###</marc:subfield>
+      <marc:subfield code="a">### tag 510-code a at 2019-11-04 12:51:28.319 ###</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="550" ind1="1" ind2="0">
       <marc:subfield code="a">Composer</marc:subfield>
-      <marc:subfield code="i">### tag 550-code i at 2019-10-29 15:53:08.165 ###</marc:subfield>
+      <marc:subfield code="i">### tag 550-code i at 2019-11-04 12:51:28.319 ###</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="551" ind1="1" ind2="0">
       <marc:subfield code="a">Eisenach</marc:subfield>
       <marc:subfield code="i">go</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="599" ind1="1" ind2="0">
-      <marc:subfield code="a">### tag 599-code a at 2019-10-29 15:53:08.165 ###</marc:subfield>
-      <marc:subfield code="b">### tag 599-code b at 2019-10-29 15:53:08.165 ###</marc:subfield>
+      <marc:subfield code="a">### tag 599-code a at 2019-11-04 12:51:28.319 ###</marc:subfield>
+      <marc:subfield code="b">### tag 599-code b at 2019-11-04 12:51:28.319 ###</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="651" ind1="1" ind2="0">
-      <marc:subfield code="0">### tag 651-code 0 at 2019-10-29 15:53:08.165 ###</marc:subfield>
-      <marc:subfield code="2">### tag 651-code 2 at 2019-10-29 15:53:08.165 ###</marc:subfield>
-      <marc:subfield code="a">### tag 651-code a at 2019-10-29 15:53:08.165 ###</marc:subfield>
+      <marc:subfield code="0">### tag 651-code 0 at 2019-11-04 12:51:28.319 ###</marc:subfield>
+      <marc:subfield code="2">### tag 651-code 2 at 2019-11-04 12:51:28.319 ###</marc:subfield>
+      <marc:subfield code="a">### tag 651-code a at 2019-11-04 12:51:28.319 ###</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="667" ind1="1" ind2="0">
       <marc:subfield code="a">Hofkapellmeister</marc:subfield>
@@ -71,18 +71,18 @@
       <marc:subfield code="w">1577</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="678" ind1="1" ind2="0">
-      <marc:subfield code="a">### tag 678-code a at 2019-10-29 15:53:08.166 ###</marc:subfield>
-      <marc:subfield code="b">### tag 678-code b at 2019-10-29 15:53:08.166 ###</marc:subfield>
-      <marc:subfield code="u">### tag 678-code u at 2019-10-29 15:53:08.166 ###</marc:subfield>
+      <marc:subfield code="a">### tag 678-code a at 2019-11-04 12:51:28.319 ###</marc:subfield>
+      <marc:subfield code="b">### tag 678-code b at 2019-11-04 12:51:28.319 ###</marc:subfield>
+      <marc:subfield code="u">### tag 678-code u at 2019-11-04 12:51:28.319 ###</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="680" ind1="1" ind2="0">
-      <marc:subfield code="5">### tag 680-code 5 at 2019-10-29 15:53:08.166 ###</marc:subfield>
+      <marc:subfield code="5">### tag 680-code 5 at 2019-11-04 12:51:28.319 ###</marc:subfield>
       <marc:subfield code="a">1723-1750 Thomaskantor</marc:subfield>
-      <marc:subfield code="i">### tag 680-code i at 2019-10-29 15:53:08.166 ###</marc:subfield>
+      <marc:subfield code="i">### tag 680-code i at 2019-11-04 12:51:28.319 ###</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="710" ind1="1" ind2="0">
-      <marc:subfield code="0">### tag 710-code 0 at 2019-10-29 15:53:08.166 ###</marc:subfield>
-      <marc:subfield code="a">### tag 710-code a at 2019-10-29 15:53:08.166 ###</marc:subfield>
+      <marc:subfield code="0">### tag 710-code 0 at 2019-11-04 12:51:28.319 ###</marc:subfield>
+      <marc:subfield code="a">### tag 710-code a at 2019-11-04 12:51:28.319 ###</marc:subfield>
     </marc:datafield>
     <marc:datafield tag="856" ind1="1" ind2="0">
       <marc:subfield code="u">http://digital.slub-dresden.de/werkansicht/dlf/11361/102/0/</marc:subfield>

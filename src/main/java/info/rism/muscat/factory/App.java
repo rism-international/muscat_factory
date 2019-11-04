@@ -30,12 +30,11 @@ public class App
     		if (model.equals("source")) {
     			for (String tp : Template.all_templates()) {
     				MarcConfig marcConfig = new MarcConfig("muscat/config/marc/tag_config_" + model + ".yml");
-    				System.out.println(tp);
     				Template template = new Template(tp);
     				List<String> excluded_tags = template.excluded_tags(); 
     				marcConfig.removeTags(excluded_tags);
-    				FieldContent fieldContent = new FieldContent(model + ".txt");
-    				MarcxmlBuilder marcxmlBuilder = new MarcxmlBuilder("output/source/"+ tp + ".xml");        
+    				FieldContent fieldContent = new FieldContent(tp + ".txt");
+    				MarcxmlBuilder marcxmlBuilder = new MarcxmlBuilder("output/sources/"+ tp + ".xml");        
         			marcxmlBuilder.build(marcConfig, fieldContent, template.getLeader());    				    				
     			}
     			
@@ -47,11 +46,7 @@ public class App
     			marcxmlBuilder.build(marcConfig, fieldContent, "00000cam a2200000 a 4500");
     		}
     	}
-    	System.out.println(Template.all_templates());
-    	Template template = new Template("collection");
-    	System.out.println(template.excluded_tags());
-    	//System.out.println(template.getConfiguration());
-    	//System.out.println(template.getLeader());
+    	
     	System.out.println("Completed!");
     }
 }

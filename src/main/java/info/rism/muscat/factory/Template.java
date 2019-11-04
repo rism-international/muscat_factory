@@ -86,9 +86,9 @@ public class Template {
 		 String line1=null;
 		 while ((line1 = reader.readLine()) != null){
 			 fr.write(line1 + "\n");
-			 //System.out.println(line1 + "\n");
 			 
 		 }
+		 reader.close();
 		 fr.close();
 
 	}

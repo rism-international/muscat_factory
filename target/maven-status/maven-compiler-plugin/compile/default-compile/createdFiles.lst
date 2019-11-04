@@ -1,6 +1,6 @@
 info/rism/muscat/factory/FieldContent.class
 info/rism/muscat/factory/Template.class
 info/rism/muscat/factory/App.class
-info/rism/muscat/factory/MarcConfig.class
 info/rism/muscat/factory/MarcxmlBuilder.class
+info/rism/muscat/factory/MarcConfig.class
 info/rism/muscat/factory/YamlParser.class

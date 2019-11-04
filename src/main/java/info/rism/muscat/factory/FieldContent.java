@@ -19,6 +19,13 @@ public class FieldContent {
 		this.tags = parse();	 
 	}
 
+	/**
+	 * This will use content from the xxx.txt files in the config folder instead of timestamp values
+	 * returning a map with field content from the config-folder
+	 * @return
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
 	public HashMap<String, HashMap<String, String>> parse() throws FileNotFoundException, IOException {
 		HashMap<String, HashMap<String, String>> hash = new HashMap<String, HashMap<String, String>>();
 		try(BufferedReader br = new BufferedReader(new FileReader(this.filename))) {
@@ -52,6 +59,12 @@ public class FieldContent {
 		return this.tags;
 	}
 	
+	/**
+	 * Return the content of a datafield (df, code) or controlfield (df, null)
+	 * @param tag
+	 * @param subfield
+	 * @return
+	 */
 	public String getContent(String tag, String subfield) {		
 		if (this.tags.get(tag) == null) {
 			return null;

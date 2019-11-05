@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class App 
 {
-    public static void main( String[] args ) throws IOException
+    public static void main( String[] args ) throws IOException, ClassNotFoundException
     {
     	Template.repair_yaml();
     	
@@ -27,8 +27,10 @@ public class App
     	}
     	for (String model : models) {    		
     		if (model.equals("source")) {
+    			MarcConfig marcsourceConfig = new MarcConfig(model);
+    			marcsourceConfig.compare();
     			for (String tp : Template.all_templates()) {
-    				MarcConfig marcConfig = new MarcConfig("muscat/config/marc/tag_config_" + model + ".yml");
+    				MarcConfig marcConfig = new MarcConfig(model);
     				Template template = new Template(tp);
     				List<String> excluded_tags = template.excluded_tags(); 
     				marcConfig.removeTags(excluded_tags);
@@ -44,7 +46,8 @@ public class App
     		}
     		else {
     			if (!model.equals("holding")) {
-    				MarcConfig marcConfig = new MarcConfig("muscat/config/marc/tag_config_" + model + ".yml");
+    				MarcConfig marcConfig = new MarcConfig(model);
+    				marcConfig.compare();
     				FieldContent fieldContent = new FieldContent(model + ".txt");
     				MarcxmlBuilder marcxmlBuilder = new MarcxmlBuilder("output/"+ model + ".xml");        
     				marcxmlBuilder.build(marcConfig, fieldContent, "00000cam a2200000 a 4500", false);

@@ -22,6 +22,7 @@ With command line:
 ```bash
 user@host> java -jar bin/factory.jar
 ```
+As a goody all changes in the Marc-Configration (added tags and/or subfields) are listed automatically in the marctags.log afterwards. 
 
 ### Build
 

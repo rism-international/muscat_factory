@@ -1,4 +1,4 @@
-=001  452503572
+=001  450200102
 =031  ##$a1$b1$c1$gC-1$mS$nxFC$oc$p'4D/A{8FE}4DA/{8.B''3CD}'4B(A)$rD$t[Zwingt die Saiten in Cithara]$u30944636
 =041  ##$ager
 =100  1#$aBach, Johann Sebastian$d1685-1750$02539
@@ -12,5 +12,6 @@
 =650  00$aCantatas$025226
 =690  ##$aBWV$n36/4$011
 =730  10$aSchwingt freudig euch empor$kExcerpts$mV (4)$04085513
+=773  ##$w450200101
 =852  ##$aD-B$cAm.B 48 (33)$eStaatsbibliothek zu Berlin - Preußischer Kulturbesitz, Musikabteilung$x30000655
 =930  ##$01001$aBach: Wie schön leuchtet der Morgenstern BWV1

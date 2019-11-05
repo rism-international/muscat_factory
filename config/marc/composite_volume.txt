@@ -1,16 +1,10 @@
-=001  452503572
-=031  ##$a1$b1$c1$gC-1$mS$nxFC$oc$p'4D/A{8FE}4DA/{8.B''3CD}'4B(A)$rD$t[Zwingt die Saiten in Cithara]$u30944636
-=041  ##$ager
+=001  00000990003397
+=028  20$a2884$801
+=035  ##$aB 443; BB 443
 =100  1#$aBach, Johann Sebastian$d1685-1750$02539
-=240  0#$aWie schön leuchtet der Morgenstern$gRISM$03902503
-=245  10$a[caption title:] 33. Wie schön leuchtet der Morgen=Stern φ.
-=300  ##$ascore: f.19v$801
-=500  ##$aFirst work of Bach
-=593  ##$aManuscript copy$801
-=594  ##$bS$c1
-=599  ##$aThis is an internal comment
-=650  00$aCantatas$025226
-=690  ##$aBWV$n36/4$011
-=730  10$aSchwingt freudig euch empor$kExcerpts$mV (4)$04085513
-=852  ##$aD-B$cAm.B 48 (33)$eStaatsbibliothek zu Berlin - Preußischer Kulturbesitz, Musikabteilung$x30000655
-=930  ##$01001$aBach: Wie schön leuchtet der Morgenstern BWV1
+=240  10$aCantatas$03901995
+=245  10$aKirchen-Musik von Joh. Sebast. Bach ... herausgegeben von Adolph Bernhard Marx [Bonn, Nicolaus Simrock]
+=300  10$ascore$801
+=510  ##$aRISM A/I$cB 443; BB 443
+=593  10$aPrint$801
+=710  ##$aN. Simrock$040010191$4pbl

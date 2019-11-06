@@ -13,21 +13,30 @@ For testing purposes it's necessary to have a dataset with all marc fields from 
 ### Prerequisits
 - Un*x (due to folder structure)
 - Java 8 or higher
-- Synchronized Muscat repository as submodule (eg. "git submodule update")
-
+- Important: Synchronized Muscat repository as submodule (eg. "git submodule update")
 
 ### Execution
+
+There are two utility jar-binaries for standalone execution in the bin/ folder: factory.jar and tagcheck.jar.
+
 With command line:
 
 ```bash
-user@host> java -jar bin/factory.jar
+user@~muscat_factory> java -jar bin/factory.jar
 ```
-As a goody all changes in the Marc-Configration (added tags and/or subfields) are listed automatically in the marctags.log afterwards. 
+creates a dataset with all tags and subfields from the Muscat-MarcConfiguration, also with templates in sources.xml
+As a goody all changes in the Marc-Configuration (added tags and/or subfields) are listed automatically in the marctags.log afterwards.
+
+```bash
+user@~muscat_factory> java -jar bin/tagcheck.jar
+```
+will write all changes in the Muscat-MarcConfig to marctags.log in the log/folder.
+ 
 
 ### Build
 
 ```bash
-user@host> mvn clean compile assembly:single
+user@~muscat_factory> mvn package
 ```
 
 ## Todo

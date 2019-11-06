@@ -1,5 +1,6 @@
 package info.rism.muscat.factory;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -81,11 +82,16 @@ public class MarcConfig {
 		oos.writeObject(this.tags);
 		oos.close();		
 	}
-	
+
 	public SortedMap<String, Object> restore() throws IOException, ClassNotFoundException{
-		 FileInputStream fis = new FileInputStream("tmp/"+model+".ser");
-		 ObjectInputStream ois = new ObjectInputStream(fis);
-		 return (SortedMap<String, Object>) ois.readObject();
+		String filename = "tmp/"+model+".ser";
+		File tempFile = new File(filename);
+		if (!tempFile.exists()) {
+			dump();
+		}
+		FileInputStream fis = new FileInputStream(filename);
+		ObjectInputStream ois = new ObjectInputStream(fis);
+		return (SortedMap<String, Object>) ois.readObject();
 	}
 
 	public void compare() throws ClassNotFoundException, IOException {
@@ -93,23 +99,50 @@ public class MarcConfig {
 		List<String> log = new ArrayList<String>();
 		SortedMap<String, Object> dumpMap = restore();
 		String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+		String capitalizedModel = model.substring(0, 1).toUpperCase() + model.substring(1);
 		/**
-		 * TODO this should be done also with removing tags and subfields
+		 * For new tags and subfields
 		 */
 		for (String tag : this.tags.keySet()) {
 			if (!dumpMap.containsKey(tag)){
-				log.add("[" + time + "] " + "New tag " + model + " " + tag);
+				String messageString = "[" + time + "] " + capitalizedModel + ": NEW tag " + tag; 
+				log.add(messageString);
+				System.out.println(messageString);
 			}
 			else {
 				List<String> subfields = (List<String>) this.tags.get(tag);
 				List<String> dumpsubfields = (List<String>) dumpMap.get(tag);
 				for (String code : subfields) {
 					if (!dumpsubfields.contains(code)) {
-						log.add("[" + time + "] " + "New subfield " + model + " " + tag + "$" + code);
+						String messageString = "[" + time + "] " + capitalizedModel + ": NEW subfield " + tag + "$" + code;
+					    log.add(messageString);
+					    System.out.println(messageString);
 					}									
 				}
 			}
 		}
+		/**
+		 * For removed tags and subfields
+		 */	
+		for (String tag : dumpMap.keySet()) {
+			if (!this.tags.containsKey(tag)){
+				String messageString = "[" + time + "] " + capitalizedModel + ": REMOVED tag " + tag; 
+				log.add(messageString);
+				System.out.println(messageString);
+			}
+			else {
+				List<String> subfields = (List<String>) this.tags.get(tag);
+				List<String> dumpsubfields = (List<String>) dumpMap.get(tag);
+				for (String code : dumpsubfields) {
+					if (!subfields.contains(code)) {
+						String messageString = "[" + time + "] " + capitalizedModel + ": REMOVED subfield " + tag + "$" + code;
+					    log.add(messageString);
+					    System.out.println(messageString);
+					}									
+				}
+			}
+		}
+		
 		if (!log.isEmpty()) {
 			String filename= "log/marctags.log";
 			String content = new String(Files.readAllBytes(Paths.get(filename)));			
@@ -120,9 +153,7 @@ public class MarcConfig {
 			fw.write(content);
 			fw.close();
 			dump();
-		} else {
-			dump();
-		}
+		} 
 		
 	}
 	

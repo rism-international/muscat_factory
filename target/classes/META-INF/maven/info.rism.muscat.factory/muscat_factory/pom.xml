@@ -39,21 +39,51 @@
   </dependencies>
 
   <build>
-  
    <plugins>
     <plugin>
       <artifactId>maven-assembly-plugin</artifactId>
-      <configuration>
-        <archive>
-          <manifest>
-            <mainClass>info.rism.muscat.factory.App</mainClass>
-          </manifest>
-        </archive>
-        <descriptorRefs>
-          <descriptorRef>jar-with-dependencies</descriptorRef>
-        </descriptorRefs>
-      </configuration>
-     </plugin>
+        <executions>
+     	  <execution>
+            <id>make-tagcheck</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <archive>
+                <manifest>
+                  <mainClass>info.rism.muscat.factory.Tagcheck</mainClass>
+                </manifest>
+              </archive>
+              <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+              <finalName>../bin/tagcheck</finalName>
+              <appendAssemblyId>false</appendAssemblyId>
+            </configuration>                 
+           </execution>
+           <execution>
+            <id>make-factory</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <archive>
+                <manifest>
+                  <mainClass>info.rism.muscat.factory.Factory</mainClass>
+                </manifest>
+              </archive>
+              <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+              <finalName>../bin/factory</finalName>
+              <appendAssemblyId>false</appendAssemblyId>
+            </configuration>                 
+           </execution>
+         </executions>
+         
+      </plugin>
     </plugins>
 
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

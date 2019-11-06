@@ -1,6 +1,7 @@
 /home/stephan/projects/muscat_factory/src/main/java/info/rism/muscat/factory/Template.java
+/home/stephan/projects/muscat_factory/src/main/java/info/rism/muscat/factory/Factory.java
 /home/stephan/projects/muscat_factory/src/main/java/info/rism/muscat/factory/MarcxmlBuilder.java
 /home/stephan/projects/muscat_factory/src/main/java/info/rism/muscat/factory/FieldContent.java
-/home/stephan/projects/muscat_factory/src/main/java/info/rism/muscat/factory/App.java
 /home/stephan/projects/muscat_factory/src/main/java/info/rism/muscat/factory/YamlParser.java
 /home/stephan/projects/muscat_factory/src/main/java/info/rism/muscat/factory/MarcConfig.java
+/home/stephan/projects/muscat_factory/src/main/java/info/rism/muscat/factory/Tagcheck.java

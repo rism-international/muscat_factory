@@ -9,10 +9,11 @@ import java.util.List;
  * Main class
  *
  */
-public class App 
+public class Factory 
 {
     public static void main( String[] args ) throws IOException, ClassNotFoundException
     {
+    	System.out.println("Building MarcXML-files in output/ folder...");
     	Template.repair_yaml();
     	
     	String dirString = System.getProperty("user.dir");
@@ -51,6 +52,10 @@ public class App
     				FieldContent fieldContent = new FieldContent(model + ".txt");
     				MarcxmlBuilder marcxmlBuilder = new MarcxmlBuilder("output/"+ model + ".xml");        
     				marcxmlBuilder.build(marcConfig, fieldContent, "00000cam a2200000 a 4500", false);
+    			}
+    			else {
+    				MarcConfig marcConfig = new MarcConfig(model);
+    				marcConfig.compare();
     			}
     		}
     	}

@@ -31,6 +31,8 @@ As a goody all changes in the Marc-Configuration (added tags and/or subfields) a
 user@~muscat_factory> java -jar bin/tagcheck.jar
 ```
 will write all changes in the Muscat-MarcConfig to marctags.log in the log/folder.
+
+The VERSION string is saved in file VERSION and displayed as sysout.
  
 
 ### Build

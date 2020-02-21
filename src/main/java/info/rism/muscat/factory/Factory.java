@@ -2,6 +2,9 @@ package info.rism.muscat.factory;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,6 +55,7 @@ public class Factory
     				FieldContent fieldContent = new FieldContent(model + ".txt");
     				MarcxmlBuilder marcxmlBuilder = new MarcxmlBuilder("output/"+ model + ".xml");        
     				marcxmlBuilder.build(marcConfig, fieldContent, "00000cam a2200000 a 4500", false);
+    				
     			}
     			else {
     				MarcConfig marcConfig = new MarcConfig(model);
@@ -59,7 +63,11 @@ public class Factory
     			}
     		}
     	}
-    	
+    	String version_string = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));    	
+    	PrintWriter out = new PrintWriter(dirString + "/VERSION");
+    	out.println(version_string); 
+    	out.close();
+    	System.out.println("Version string: " + version_string);
     	System.out.println("Completed!");
     }
 }

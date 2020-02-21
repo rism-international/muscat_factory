@@ -26,10 +26,10 @@ import org.marc4j.marc.Record;
 public class MarcxmlBuilder {
 
 	private final String filename;	
-
+	
 	public MarcxmlBuilder(String filename) {
 		String dirString = System.getProperty("user.dir");
-		this.filename = dirString + "/" + filename; 
+		this.filename = dirString + "/" + filename;
 	}
 
 	public void build(MarcConfig marcConfig, FieldContent fieldContent, String leader, Boolean withHolding) throws IOException {

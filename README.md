@@ -12,7 +12,7 @@ For testing purposes it's necessary to have a dataset with all marc fields from 
 
 ### Prerequisits
 - Un*x (due to folder structure)
-- Java 8 or higher
+- Java 8 or higher (existing build classes Java 11)
 - Important: Synchronized Muscat repository as submodule (eg. "git submodule update")
 
 ### Execution

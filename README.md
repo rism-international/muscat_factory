@@ -23,10 +23,10 @@ Get muscat submodule for the first time:
 user@muscat_factory> git submodule update --init --recursive
 ```
 
-To update:
+And update:
 
 ```bash
-user@muscat_factory> git submodule update
+user@muscat_factory> git submodule update --recursive --remote
 ```
 
 ## Tutorial

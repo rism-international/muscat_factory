@@ -15,12 +15,19 @@ For testing purposes it's necessary to have a dataset with all marc fields from 
 - Java 8 or higher (existing build classes Java 11)
 - Important: Synchronized Muscat repository as submodule (eg. "git submodule update")
 
-Get muscat submodule:
+Get muscat submodule for the first time:
 
 ```bash
-user@muscat_factory> git submodule update
+user@muscat_factory> git submodule update --init --recursive
 ```
-Build jar.file
+
+To update:
+
+```bash
+user@muscat_factory> git submodule update --init --recursive
+```
+
+Build jar.file:
 
 ```bash
 user@~muscat_factory> mvn package

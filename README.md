@@ -26,15 +26,8 @@ user@muscat_factory> git submodule update --init --recursive
 To update:
 
 ```bash
-user@muscat_factory> git submodule update --init --recursive
+user@muscat_factory> git submodule update
 ```
-
-Build jar.file (only if necessary):
-
-```bash
-user@~muscat_factory> mvn package
-```
-
 
 ## Tutorial
 
@@ -47,19 +40,26 @@ With command line:
 ```bash
 user@~muscat_factory> java -jar bin/factory.jar
 ```
-creates a dataset with all tags and subfields from the Muscat-MarcConfiguration, also with templates in sources.xml
-As a goody all changes in the Marc-Configuration (added tags and/or subfields) are listed automatically in the marctags.log afterwards.
+creates a dataset with all tags and subfields from the Muscat-MarcConfiguration, also with templates in sources.xml  
+
+
+As a goody all changes in the Marc-Configuration (added tags and/or subfields) are listed automatically in the marctags.log afterwards:
 
 ```bash
 user@~muscat_factory> java -jar bin/tagcheck.jar
 ```
 will write all changes in the Muscat-MarcConfig to marctags.log in the log/folder.
 
-The VERSION string is saved in file VERSION and displayed as sysout.
+The VERSION string is saved in file VERSION and displayed also to sysout.
  
 
 ### Build
 
+Build jar.file (only if necessary):
+
+```bash
+user@~muscat_factory> mvn package
+```
 
 ## Todo
 Better Field content in xxx.txt

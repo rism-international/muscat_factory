@@ -8,12 +8,26 @@ All exported files are created in the output/ folder.
 ## Background
 For testing purposes it's necessary to have a dataset with all marc fields from Muscat. Additionally all (source-)templates should be considered, so after executing the jar we have in the output folder MarcXML-files with this set. To improve readability and showing of dependencies the field content is taken from the config folder, but the linkage for now is loose since this needs cross-references in all the content files. These cross-references has to be added manually, an overview dependency schema would be one step to improve this.    
 
-## Tutorial
+## Installation
 
 ### Prerequisits
 - Un*x (due to folder structure)
 - Java 8 or higher (existing build classes Java 11)
 - Important: Synchronized Muscat repository as submodule (eg. "git submodule update")
+
+Get muscat submodule:
+
+```bash
+user@muscat_factory> git submodule update
+```
+Build jar.file
+
+```bash
+user@~muscat_factory> mvn package
+```
+
+
+## Tutorial
 
 ### Execution
 
@@ -37,9 +51,6 @@ The VERSION string is saved in file VERSION and displayed as sysout.
 
 ### Build
 
-```bash
-user@~muscat_factory> mvn package
-```
 
 ## Todo
 Better Field content in xxx.txt

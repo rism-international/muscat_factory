@@ -12,7 +12,9 @@ For testing purposes it's necessary to have a dataset with all marc fields from 
 
 ### Prerequisits
 - Un*x (due to folder structure)
+- Git
 - Java 8 or higher (existing build classes Java 11)
+- Maven (to build the binary if necessary)
 - Important: Synchronized Muscat repository as submodule (eg. "git submodule update")
 
 Get muscat submodule for the first time:
@@ -27,7 +29,7 @@ To update:
 user@muscat_factory> git submodule update --init --recursive
 ```
 
-Build jar.file:
+Build jar.file (only if necessary):
 
 ```bash
 user@~muscat_factory> mvn package
